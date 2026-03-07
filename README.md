@@ -2,6 +2,9 @@
 
 A minimal, modular Neovim configuration built with Lua, optimized for productivity and extensibility. This setup emphasizes performance, modern plugins, and a clean file structure for easy customization.
 
+<img width="1920" height="1080" alt="screen_nvim" src="https://github.com/user-attachments/assets/fd240423-5f23-4517-9666-313567a42315" />
+
+
 ## Features
 
 - **Lua-based**: Fully scripted in Lua for better performance and maintainability.
@@ -16,10 +19,16 @@ A minimal, modular Neovim configuration built with Lua, optimized for productivi
 #Themes
 
 - CodeMidday
-- CodeDark
-- CodeLight
+  <img width="1920" height="1080" alt="code_midday" src="https://github.com/user-attachments/assets/470f6f9d-ac4b-45c6-b40b-f6da4696c264" />
+
+- CodeCool
+- <img width="1920" height="1080" alt="codecool" src="https://github.com/user-attachments/assets/753ccb57-c959-44d7-8158-75435e3c24c7" />
+
 - CodeDim
-- CodeDuke
+- <img width="1920" height="1080" alt="code_dim" src="https://github.com/user-attachments/assets/599bb25e-a80e-4fd3-9f74-5a30f53f5307" />
+
+- CodeDawn
+<img width="1920" height="1080" alt="code_duke" src="https://github.com/user-attachments/assets/d78b2818-9f51-4b50-a8fa-5b2478e9615e" />
 
 ## Installation
 
@@ -33,6 +42,5 @@ A minimal, modular Neovim configuration built with Lua, optimized for productivi
    git clone https://github.com/p12dev/nvimConfig.git ~/.config/nvim
    ```
 
-```
 
-```
+
