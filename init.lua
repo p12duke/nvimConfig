@@ -1,8 +1,6 @@
 -- Main Settings and Imports vim.g.mapleader = " "
 
--- Set background color for vim.ui.select
 
--- Optional: Change NormalFloat if used for floating windows
 
 --custom keymaps
 -- vim.keymap.set("n", ";", ":", { silent = true, noremap = true })
