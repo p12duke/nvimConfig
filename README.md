@@ -18,6 +18,18 @@ A minimal, modular Neovim configuration built with Lua, optimized for productivi
 
 #Themes
 
+<table>
+  <tr>
+    <td><img width="480" height="270" alt="code_midday" src="https://github.com/user-attachments/assets/470f6f9d-ac4b-45c6-b40b-f6da4696c264" /></td>
+    <td><img width="480" height="270" alt="codecool" src="https://github.com/user-attachments/assets/753ccb57-c959-44d7-8158-75435e3c24c7" /></td>
+  </tr>
+  <tr>
+    <td><img width="480" height="270" alt="code_dim" src="https://github.com/user-attachments/assets/599bb25e-a80e-4fd3-9f74-5a30f53f5307" /></td>
+    <td><img width="480" height="270" alt="code_duke" src="https://github.com/user-attachments/assets/d78b2818-9f51-4b50-a8fa-5b2478e9615e" /></td>
+  </tr>
+</table>
+
+
 - CodeMidday
   <img width="960" height="540" alt="code_midday" src="https://github.com/user-attachments/assets/470f6f9d-ac4b-45c6-b40b-f6da4696c264" />
 
