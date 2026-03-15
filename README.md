@@ -47,7 +47,7 @@ A minimal, modular Neovim configuration built with Lua, optimized for productivi
 4. **Ensure that the Onedark original config is setup like this for the extra themes**:
      - I've found some breaking changes after one dark is updated.
   
-`return {
+```return {
 	"olimorris/onedarkpro.nvim",
 	priority = 1000, -- Ensure it loads first
 	option = {
@@ -72,13 +72,14 @@ A minimal, modular Neovim configuration built with Lua, optimized for productivi
 		vim.cmd("colorscheme onedark_vivid")
 	end,
 }
-`
+```
 5. **Setting up toggle term**
-    Toggle term has also received breaking changes and float term doesn't work as expected causing lags. So, I've found an unusual way of working with this.
-    You can create a seperate file with the following code and set your keymap in the input.lua. This code snippet will open the term  in present working directory in floating direction.
 
-    `local cmd_toggle = "ToggleTerm"
+    Toggle term has also received breaking changes and float term doesn't work as expected causing lags. So, I've found an unusual way of working with this.
+    You can create a seperate file with the following code and set your keymap in the input.lua. This code snippet will open the term  in present working  		directory in floating direction.
+
+    ```local cmd_toggle = "ToggleTerm"
 local current_buffer = vim.fs.dirname(vim.api.nvim_buf_get_name(0))
 print(current_buffer)
 vim.api.nvim_cmd({ cmd = cmd_toggle, args = { "dir=" .. current_buffer, "size=" .. 2 } }, {})
-`
+```
