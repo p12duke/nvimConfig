@@ -1,0 +1,14 @@
+{
+    "diagnostics.globals": [
+        "vim",
+        "night",
+        "local",
+        "v",
+        "helper",
+        "customText",
+        "code_midday"
+    ],
+    "diagnostics.disable": [
+        "deprecated"
+    ]
+}

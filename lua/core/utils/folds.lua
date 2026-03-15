@@ -1,0 +1,77 @@
+--
+-- -- Disable folding initially
+-- vim.opt.foldenable = false
+--
+-- -- Set initial foldlevel
+-- vim.opt.foldlevel = 99
+--
+-- -- Set fillchars for folds
+-- vim.opt.fillchars = { fold = ':' }
+--
+-- -- Set custom foldtext function
+-- vim.opt.foldtext = 'CustomFoldText()'
+--
+-- -- Set foldmethod to expr
+-- vim.opt.foldmethod = 'expr'
+--
+-- -- Set foldexpr to GetPotionFold(v:lnum)
+-- vim.opt.foldexpr = 'GetPotionFold(v:lnum)'
+--
+-- -- Function to determine fold level based on indentation
+-- function GetPotionFold(lnum)
+--   local line = vim.fn.getline(lnum)
+--   if line:match('^\\s*$') then
+--     return -1 -- Empty line
+--   end
+--
+--   local thisIndent = IndentLevel(lnum)
+--   local nextIndent = IndentLevel(NextNonBlankLine(lnum))
+--
+--   if nextIndent == thisIndent then
+--     return thisIndent
+--   elseif nextIndent < thisIndent then
+--     return thisIndent
+--   elseif nextIndent > thisIndent then
+--     return '>' .. nextIndent
+--   end
+-- end
+--
+-- -- Function to get indentation level of a line
+-- function IndentLevel(lnum)
+--   return vim.fn.indent(lnum) / vim.opt.shiftwidth:get()
+-- end
+--
+-- -- Function to find the next non-blank line
+-- function NextNonBlankLine(lnum)
+--   local numlines = vim.fn.line('$')
+--   for current = lnum + 1, numlines do
+--     if vim.fn.getline(current):match('\v\\S') then
+--       return current
+--     end
+--   end
+--   return -2 -- No non-blank lines found
+-- end
+--
+-- -- Function to create custom fold text
+-- function CustomFoldText()
+--   -- Find first non-blank line in fold
+--   local fs = vim.v.foldstart
+--   while vim.fn.getline(fs):match('^\\s*$') do
+--     fs = vim.fn.nextnonblank(fs + 1)
+--   end
+--
+--   local line
+--   if fs > vim.v.foldend then
+--     line = vim.fn.getline(vim.v.foldstart)
+--   else
+--     line = vim.fn.substitute(vim.fn.getline(fs), '\t', string.rep(' ', vim.opt.tabstop:get()), 'g')
+--   end
+--
+--   local w = vim.fn.winwidth(0) - vim.opt.foldcolumn:get() - (vim.opt.number:get() and 8 or 0)
+--   local foldSize = 1 + vim.v.foldend - vim.v.foldstart
+--   local foldSizeStr = " " .. foldSize .. " lines "
+--   local foldLevelStr = string.rep("+--", vim.v.foldlevel)
+--   local expansionString = string.rep(" ", w - vim.fn.strwidth(foldSizeStr .. line .. foldLevelStr))
+--
+--   return line .. expansionString .. foldSizeStr .. foldLevelStr
+-- end

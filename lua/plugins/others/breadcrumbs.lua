@@ -1,0 +1,24 @@
+local M = {
+	"LunarVim/breadcrumbs.nvim",
+	dependencies = {
+		"SmiteshP/nvim-navic",
+	},
+}
+
+function M.config()
+	require("breadcrumbs").setup()
+	local icons = require "core.nvim-options.icons"
+	require("nvim-navic").setup {
+		icons = icons.kind,
+		highlight = true,
+		lsp = {
+			auto_attach = true,
+		},
+		click = true,
+		separator = " " .. icons.ui.ChevronRight .. " ",
+		depth_limit = 0,
+		depth_limit_indicator = "..",
+	}
+end
+
+return M
